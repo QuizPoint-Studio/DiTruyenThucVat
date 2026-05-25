@@ -78,18 +78,18 @@
 
     <script>
         // ====================================================================
-        // ĐOẠN MÃ KHUNG ĐEN TRÊN FIREBASE CỦA BẠN (ĐÃ ĐIỀN ĐỦ ĐƯỜNG DẪN DATABASE)
+        // ĐOẠN MÃ CẤU HÌNH TÀI KHOẢN FIREBASE CHUẨN XÁC 100% CỦA BẠN
         // ====================================================================
        const firebaseConfig = {
-  apiKey: "AIzaSyC-n88rPoijqfE44ZF3ulPZdcGz_rtC3lg",
-  authDomain: "quizpointstuidio.firebaseapp.com",
-  databaseURL: "https://quizpointstuidio-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "quizpointstuidio",
-  storageBucket: "quizpointstuidio.firebasestorage.app",
-  messagingSenderId: "592248583165",
-  appId: "1:592248583165:web:8f7dac2ab36dbf35aadf94",
-  measurementId: "G-T8QQ1HEZGC"
-};
+          apiKey: "AIzaSyC-n88rPoijqfE44ZF3ulPZdcGz_rtC3lg",
+          authDomain: "quizpointstuidio.firebaseapp.com",
+          databaseURL: "https://quizpointstuidio-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "quizpointstuidio",
+          storageBucket: "quizpointstuidio.firebasestorage.app",
+          messagingSenderId: "592248583165",
+          appId: "1:592248583165:web:8f7dac2ab36dbf35aadf94",
+          measurementId: "G-T8QQ1HEZGC"
+        };
         // Khởi tạo các dịch vụ toàn cục
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
@@ -115,7 +115,7 @@
         const Eye = (props) => <IconWrapper {...props}><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></IconWrapper>;
         const ChevronLeft = (props) => <IconWrapper {...props}><polyline points="15 18 9 12 15 6"/></IconWrapper>;
         const ChevronRight = (props) => <IconWrapper {...props}><polyline points="9 18 15 12 9 6"/></IconWrapper>;
-        const Sparkles = (props) => <IconWrapper {...props}><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></IconWrapper>;
+        const Sparkles = (props) => <IconWrapper {...props}><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275 1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></IconWrapper>;
         const Sun = (props) => <IconWrapper {...props}><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/></IconWrapper>;
         const Cloud = (props) => <IconWrapper {...props}><path d="M17.5 19c2.5 0 4.5-2 4.5-4.5 0-2-1.5-3.5-3.5-4-1-3.5-4.5-5.5-8-4.5-2.5.5-4.5 2.5-5 5-2 .5-3.5 2.5-3.5 4.5C2 17.5 4 19 6.5 19h11z"/></IconWrapper>;
         const Droplet = (props) => <IconWrapper {...props}><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></IconWrapper>;
@@ -128,6 +128,7 @@
         const Target = (props) => <IconWrapper {...props}><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></IconWrapper>;
         const Lock = (props) => <IconWrapper {...props}><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></IconWrapper>;
         const Mail = (props) => <IconWrapper {...props}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></IconWrapper>;
+        const ShieldAlert = (props) => <IconWrapper {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></IconWrapper>;
 
         // ============================================================================
         // HỆ THỐNG 148 CÂU HỎI TRẮC NGHIỆM CỦA BẠN LƯỢNG
@@ -155,7 +156,6 @@
           [20, "Tháng nào có lượng bốc hơi thấp nhất ở khu vực TP.HCM?", "Tháng 4", "Tháng 6", "Tháng 12 – tháng 1", "Tháng 9", "c"]
         ];
 
-        // Điền thêm câu hỏi giả định tự động cho đủ 148 câu của Lượng
         while(FULL_DATA.length < 148) {
             const nextId = FULL_DATA.length + 1;
             FULL_DATA.push([
@@ -165,12 +165,32 @@
             ]);
         }
 
+        // Tự động phân chia 148 câu thành 5 khối đề
+        const TEST_DATA = {
+            1: FULL_DATA.slice(0, 30),
+            2: FULL_DATA.slice(30, 60),
+            3: FULL_DATA.slice(60, 90),
+            4: FULL_DATA.slice(90, 120),
+            5: FULL_DATA.slice(120, 148)
+        };
+
+        // Hàm tạo dấu vân tay thiết bị ảo ngẫu nhiên độc bản
+        const getOrCreateDeviceToken = () => {
+            let token = localStorage.getItem("qp_device_token_meteo");
+            if (!token) {
+                token = "m_meteo_" + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
+                localStorage.setItem("qp_device_token_meteo", token);
+            }
+            return token;
+        };
+
         const QuizApp = () => {
           const [user, setUser] = useState(null);
           const [loading, setLoading] = useState(true);
           const [emailInput, setEmailInput] = useState("");
           const [passwordInput, setPasswordInput] = useState("");
           const [authError, setAuthError] = useState("");
+          const [isKicked, setIsKicked] = useState(false); // Thêm trạng thái bị kích thiết bị
 
           const [currentPart, setCurrentPart] = useState(null);
           const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -187,29 +207,65 @@
           const [reviewData, setReviewData] = useState([]); 
           const [history, setHistory] = useState([]);
 
-          // 🔄 LẮNG NGHE ĐĂNG NHẬP (Chạy trực tiếp từ SDK bảo mật cao)
+          // 🔄 ĐÃ BỔ SUNG FULL LOGIC KIỂM SOÁT THIẾT BỊ REALTIME DATABASE
           useEffect(() => {
+            let sessionRef = null;
+            const deviceToken = getOrCreateDeviceToken();
+
             const unsubscribe = auth.onAuthStateChanged((currentUser) => {
                 if (currentUser) {
+                    // ĐÃ SỬA: Lọc đúng từ khóa email của môn khí tượng ("meteo" hoặc "hocsinh")
+                    // Mình để mặc định cho phép mọi email chứa chữ "gmail" hoặc bạn có thể tự đổi từ khóa theo ý muốn
+                    if (!currentUser.email.toLowerCase().includes("gmail") && !currentUser.email.toLowerCase().includes("meteo")) {
+                        setAuthError("Tài khoản này không có quyền truy cập phòng thi môn Khí tượng!");
+                        auth.signOut();
+                        setUser(null);
+                        setLoading(false);
+                        return;
+                    }
+
+                    const cleanUid = currentUser.uid;
+                    sessionRef = db.ref(`active_sessions/mon_khi_tuong/${cleanUid}`);
+
+                    if (!user) {
+                        sessionRef.set({
+                            deviceToken: deviceToken,
+                            lastLogin: firebase.database.ServerValue.TIMESTAMP,
+                            email: currentUser.email
+                        });
+                    }
+
+                    // Lắng nghe xem có thiết bị nào khác đăng nhập đè lên không
+                    sessionRef.on("value", (snapshot) => {
+                        const data = snapshot.val();
+                        if (data && data.deviceToken !== deviceToken) {
+                            setIsKicked(true);
+                            auth.signOut();
+                            setUser(null);
+                        }
+                    });
+
                     setUser(currentUser);
                     loadCloudHistory(currentUser.uid);
                 } else {
                     setUser(null);
                     setHistory([]);
+                    if (sessionRef) sessionRef.off();
                 }
-                setLoading(false); // 🚀 Tắt màn hình chờ ngay lập tức!
+                setLoading(false); 
             });
-            return () => unsubscribe();
-          }, []);
+            return () => {
+                unsubscribe();
+                if (sessionRef) sessionRef.off();
+            };
+          }, [user]);
 
-          // 📐 CẬP NHẬT MATHJAX CHO CÔNG THỨC TOÁN HỌC
           useEffect(() => {
             if (window.MathJax && window.MathJax.typesetPromise) {
                 window.MathJax.typesetPromise().catch((err) => console.log(err));
             }
           }, [currentQuestionIndex, currentPart, reviewMode, showResult, user]);
 
-          // 💾 TẢI LỊCH SỬ TỪ CLOUD REALTIME DATABASE
           const loadCloudHistory = (uid) => {
              const historyRef = db.ref(`meteo_history/${uid}`);
              historyRef.on('value', (snapshot) => {
@@ -226,15 +282,15 @@
              });
           };
 
-          // 🔑 LOGIC XỬ LÝ ĐĂNG NHẬP
           const handleLogin = (e) => {
-             e.preventDefault();
-             setAuthError("");
-             if (!emailInput || !passwordInput) {
-                 setAuthError("Vui lòng điền đầy đủ tài khoản và mật khẩu.");
-                 return;
-             }
-             auth.signInWithEmailAndPassword(emailInput, passwordInput)
+              e.preventDefault();
+              setAuthError("");
+              setIsKicked(false); // Reset trạng thái bị kích khi bấm login mới
+              if (!emailInput || !passwordInput) {
+                  setAuthError("Vui lòng điền đầy đủ tài khoản và mật khẩu.");
+                  return;
+              }
+              auth.signInWithEmailAndPassword(emailInput, passwordInput)
                 .catch(err => {
                     if(err.code === "auth/user-not-found" || err.code === "auth/wrong-password" || err.code === "auth/invalid-credential") {
                         setAuthError("Tài khoản hoặc mật khẩu không chính xác.");
@@ -244,13 +300,17 @@
                 });
           };
 
-          // 🚪 ĐĂNG XUẤT
           const handleLogout = () => {
-             auth.signOut().then(() => {
-                 setCurrentPart(null);
-                 setQuestions([]);
-                 setShowResult(false);
-             });
+              if (window.confirm("Bạn có chắc muốn đăng xuất khỏi phòng thi?")) {
+                  if (user) {
+                      db.ref(`active_sessions/mon_khi_tuong/${user.uid}`).remove();
+                  }
+                  auth.signOut().then(() => {
+                      setCurrentPart(null);
+                      setQuestions([]);
+                      setShowResult(false);
+                  });
+              }
           };
 
           const shuffleArray = (array) => {
@@ -262,7 +322,6 @@
             return newArray;
           };
 
-          // ☁️ ĐẨY ĐIỂM SỐ LÊN CLOUD FIREBASE KHI LÀM XONG
           const saveHistoryToCloud = (finalScore, finalWrong, totalQuestions, partId, answers) => {
             if (!user) return;
             const newRecord = {
@@ -281,20 +340,12 @@
                 c: q.correct
               }))
             };
-            
             db.ref(`meteo_history/${user.uid}`).push(newRecord)
               .then(() => alert("Đã đồng bộ kết quả thi từ xa lên Cloud thành công!"));
           };
 
           const startQuiz = (part) => {
-            const raw = FULL_DATA.filter(item => {
-                if (part === 1) return item[0] <= 30;
-                if (part === 2) return item[0] > 30 && item[0] <= 60;
-                if (part === 3) return item[0] > 60 && item[0] <= 90;
-                if (part === 4) return item[0] > 90 && item[0] <= 120;
-                if (part === 5) return item[0] > 120;
-                return false;
-            });
+            const raw = TEST_DATA[part] || [];
             const formatted = raw.map(item => ({
               id: item[0],
               q: item[1],
@@ -359,7 +410,6 @@
 
           const currentQ = questions[currentQuestionIndex];
 
-          // 🧱 GIAO DIỆN PHẦN ĐẦU LOGO
           const QuizPointLogo = () => (
             <div className="absolute top-4 left-4 sm:top-6 sm:left-8 z-40 animate-enter text-left">
               <div className="glass-panel flex items-center gap-3 px-5 py-3 rounded-2xl border border-brand-200/50 shadow-lg shadow-brand-500/10">
@@ -374,52 +424,59 @@
             </div>
           );
 
-          // MÀN HÌNH CHỜ ĐANG TẢI DỮ LIỆU FIREBASE
           if (loading) {
-              return (
-                <div className="min-h-screen flex flex-col items-center justify-center font-sans">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-500 mb-4"></div>
-                    <p className="text-gray-500 font-medium text-sm">Đang đồng bộ cấu hình cổng bảo mật...</p>
-                </div>
-              )
+            return (
+              <div className="min-h-screen flex flex-col items-center justify-center font-sans">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-500 mb-4"></div>
+                <p className="text-gray-500 font-medium text-sm">Đang đồng bộ cấu hình cổng bảo mật...</p>
+              </div>
+            )
           }
 
-          // CHẶN: HIỂN THỊ FORM ĐĂNG NHẬP NẾU CHƯA CÓ USER ĐĂNG NHẬP
           if (!user) {
-              return (
-                <div className="min-h-screen p-6 flex flex-col items-center justify-center font-sans relative">
-                    <QuizPointLogo />
-                    <div className="w-full max-w-md p-8 sm:p-10 bg-white rounded-3xl shadow-2xl border border-gray-100 animate-enter mt-14">
-                        <div className="text-center mb-8">
-                            <div className="inline-flex p-3 bg-brand-50 text-brand-600 rounded-2xl mb-3"><Lock size={32} /></div>
-                            <h2 className="text-2xl font-black text-gray-800 tracking-tight uppercase">Đăng nhập tài khoản</h2>
-                            <p className="text-xs text-gray-400 font-medium mt-1">Cơ sở dữ liệu Trắc nghiệm Khí tượng Khí hậu</p>
+            return (
+              <div className="min-h-screen p-6 flex flex-col items-center justify-center font-sans relative">
+                <QuizPointLogo />
+                <div className="w-full max-w-md p-8 sm:p-10 bg-white rounded-3xl shadow-2xl border border-gray-100 animate-enter mt-14">
+                    <div className="text-center mb-8">
+                        <div className="inline-flex p-3 bg-brand-50 text-brand-600 rounded-2xl mb-3"><Lock size={32} /></div>
+                        <h2 className="text-2xl font-black text-gray-800 tracking-tight uppercase">Đăng nhập phòng thi</h2>
+                        <p className="text-xs text-gray-400 font-medium mt-1">Trắc nghiệm Khí tượng & Khí hậu</p>
+                    </div>
+
+                    {isKicked && (
+                        <div className="mb-4 p-3 bg-rose-50 border-l-4 border-rose-500 text-rose-700 text-xs font-semibold rounded-r-xl flex items-start gap-2 animate-enter">
+                            <ShieldAlert size={18} className="flex-shrink-0 mt-0.5 animate-pulse text-rose-600" />
+                            <p>Tài khoản vừa bị đăng xuất vì phát hiện đăng nhập cùng lúc trên một thiết bị/trình duyệt khác!</p>
                         </div>
-                        
-                        <form onSubmit={handleLogin} className="space-y-5">
-                            <div>
-                                <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">Tài khoản Email</label>
-                                <div className="relative">
-                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none"><Mail size={18} /></div>
-                                    <input type="email" placeholder="hocsinh@gmail.com" value={emailInput} onChange={e => setEmailInput(e.target.value)} className="w-full pl-11 pr-4 py-3.5 bg-gray-50 text-gray-800 rounded-xl font-medium border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all text-sm" />
-                                </div>
+                    )}
+                    
+                    <form onSubmit={handleLogin} className="space-y-5">
+                        <div>
+                            <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">Tài khoản Email</label>
+                            <div className="relative">
+                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none"><Mail size={18} /></div>
+                                <input type="email" placeholder="hocsinh@gmail.com" value={emailInput} onChange={e => setEmailInput(e.target.value)} className="w-full pl-11 pr-4 py-3.5 bg-gray-50 text-gray-800 rounded-xl font-medium border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all text-sm" required />
                             </div>
-                            <div>
-                                <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">Mật mã bảo mật</label>
-                                <div className="relative">
-                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none"><Lock size={18} /></div>
-                                    <input type="password" placeholder="••••••••" value={passwordInput} onChange={e => setPasswordInput(e.target.value)} className="w-full pl-11 pr-4 py-3.5 bg-gray-50 text-gray-800 rounded-xl font-medium border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all text-sm" />
-                                </div>
+                        </div>
+                        <div>
+                            <label className="block text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">Mật mã bảo mật</label>
+                            <div className="relative">
+                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 pointer-events-none"><Lock size={18} /></div>
+                                <input type="password" placeholder="••••••••" value={passwordInput} onChange={e => setPasswordInput(e.target.value)} className="w-full pl-11 pr-4 py-3.5 bg-gray-50 text-gray-800 rounded-xl font-medium border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all text-sm" required />
                             </div>
-                            {authError && <p className="text-xs font-bold text-rose-500 bg-rose-50 p-3 rounded-lg border border-rose-100">{authError}</p>}
-                            <button type="submit" className="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-200 transition-all text-sm uppercase tracking-wider">Xác nhận đăng nhập</button>
-                        </form>
+                        </div>
+                        {authError && <p className="text-xs font-bold text-rose-500 bg-rose-50 p-3 rounded-lg border border-rose-100">{authError}</p>}
+                        <button type="submit" className="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-200 transition-all text-sm uppercase tracking-wider">Xác nhận đăng nhập</button>
+                    </form>
+                    <div className="text-center mt-6">
+                        <button onClick={() => window.location.href="./index.html"} className="text-xs text-slate-400 hover:text-brand-600 font-bold transition-all hover:underline">← Quay lại danh mục trang chủ</button>
                     </div>
                 </div>
-              )
+              </div>
+            )
           }
           
-          // GIAO DIỆN XEM LẠI CHI TIẾT CÁC CÂU LÀM SAI (REVIEW MODE)
           if (reviewMode) {
             return (
               <div className="min-h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gray-50/50">
@@ -463,7 +520,6 @@
             );
           }
 
-          // GIAO DIỆN CHỌN KHỐI ĐỀ THI CHÍNH THỨC
           if (!currentPart) {
             const menuItems = [
                 { id: 1, label: "Khí tượng Học I", sub: "Câu 1 - 30", color: "emerald", icon: <Sun size={28} /> },
@@ -476,13 +532,11 @@
               <div className="min-h-screen p-6 sm:p-8 flex flex-col items-center justify-center font-sans relative">
                 <QuizPointLogo />
                 
-                {/* CONFIG KHUNG ĐĂNG XUẤT */}
                 <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-40 animate-enter flex items-center gap-3">
                     <span className="text-xs font-bold text-gray-500 bg-white/80 py-2 px-3 rounded-xl border shadow-sm sm:block hidden">Tài khoản: {user.email}</span>
-                    <button onClick={handleLogout} className="flex items-center gap-2 px-4 py-2.5 bg-rose-50 text-rose-600 font-bold text-xs rounded-xl border border-rose-200/50 hover:bg-rose-100/70 transition-all shadow-sm"><LogOut size={16}/> Đăng xuất</button>
+                    <button onClick={handleLogout} className="flex items-center gap-2 px-4 py-2.5 bg-rose-50 text-rose-600 font-bold text-xs rounded-xl border border-rose-200/50 hover:bg-rose-100/70 transition-all shadow-sm"><LogOut size={16}/> Rời phòng thi</button>
                 </div>
 
-                {/* Tiện ích đếm người truy cập */}
                 <div className="fixed bottom-6 left-6 z-[60] animate-enter">
                   <div className="glass-panel px-4 py-3 rounded-2xl border border-brand-200/50 shadow-lg flex items-center gap-2 bg-white/90 backdrop-blur-md">
                     <div className="relative flex h-3 w-3">
@@ -551,7 +605,6 @@
                     </div>
                   </div>
 
-                  {/* THIẾT LẬP CÁC NÚT CHỌN ĐỀ */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
                     {menuItems.map((item) => {
                         const colorMap = { 
@@ -570,7 +623,6 @@
                     })}
                   </div>
 
-                  {/* KHUNG HIỂN THỊ ĐIỂM SỐ TỪ CLOUD DATABASE */}
                   <div className="glass-panel p-6 rounded-3xl shadow-sm border border-white/50 max-w-2xl mx-auto w-full text-left">
                     <div className="flex justify-between items-center mb-6 px-2">
                       <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2"><History className="text-gray-400" size={20} /> Lịch sử kết quả làm bài trực tuyến (Hệ thống Cloud)</h2>
@@ -600,7 +652,6 @@
             );
           }
 
-          // GIAO DIỆN HIỂN THỊ HOÀN THÀNH BÀI THI
           if (showResult) {
             return (
               <div className="min-h-screen flex items-center justify-center p-4 font-sans bg-gray-50 text-center relative">
@@ -619,7 +670,6 @@
 
           const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
-          // GIAO DIỆN LÀM CÂU HỎI TRẮC NGHIỆM CHI TIẾT
           return (
             <div className="min-h-screen flex flex-col items-center p-4 sm:p-6 font-sans relative">
               {isConfirming && (
